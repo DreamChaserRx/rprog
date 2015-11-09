@@ -1,0 +1,19 @@
+x <- matrix(1:9,3,3)
+x[1,1]
+x[2,3,drop=FALSE]
+x[1,]
+x[1,,drop=FALSE]
+
+x<-list(aardvark=1:5)
+x$a
+x[["a",exact=FALSE]]
+
+x<-c(1,2,4,NA,5)
+bad<-is.na(x)
+x[!bad]
+
+x<-c(1,2,3,4,NA)
+y<-c(3,4,5,6,NA)
+good<-complete.cases(x,y)
+x[good]
+y[good]
